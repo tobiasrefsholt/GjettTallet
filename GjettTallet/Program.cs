@@ -9,11 +9,8 @@
             Random rand = new Random();
             int randomNum = rand.Next(0,100);
             while (inputNum != randomNum) {
-                if (inputNum < randomNum) {
-                    Console.WriteLine("For lavt, prøv igjen!");
-                } else if (inputNum > randomNum) {
-                    Console.WriteLine("For høyt, prøv igjen!");
-                }
+                string message = (inputNum < randomNum) ? "For lavt, prøv igjen!" : "For høyt, prøv igjen!";
+                Console.WriteLine(message);
                 inputNum = Convert.ToInt32(Console.ReadLine());
             }
             if (inputNum == randomNum) {
